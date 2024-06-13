@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0">
+	<meta name="author" content="Zane Wesley">
+	<meta name="description" content="Zane Wesley's portfolio">
+    <link rel="icon" type="image/png" sizes="500x500" href="https://zanewesley.github.io/images/icon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Analytics -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-YEEGMG5QT7"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+	  gtag('config', 'G-YEEGMG5QT7');
+	</script>
+
+	<title>Zane Wesley | Portfolio</title>
+
+    <style>
+        * {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+			/*overflow-x: hidden;*/
+			transition: all 0.25s cubic-bezier(0.645,0.045,0.355,1);
+		}
+        html, body {
+			scroll-behavior: smooth;
+			background-color: #111827;/*#0a192f*/
+			font-family: 'Roboto', sans-serif;
+            color: #252525;
+            background-color: #ffffff;
+            height: 100%;
+            width: 100%;
+        }
+        .content {
+            position: fixed;
+            margin: 4em;
+            width: calc(100% - 8em);
+            height: calc(100% - 8em);
+            overflow: hidden;
+        }
+        h3 {
+            position: relative;
+            top: 0;
+            left: 0;
+            font-size: 20px;
+        }
+        h1 span {
+            display: block;
+            padding: 0.5em;
+            /*width: fit-content;*/
+            width: 50%;
+            font-size: 2.5em;
+
+        }
+        h1 span:first-child {
+            background-color: #252525;
+            color: #ffffff;
+        }
+        h1 span:nth-child(2) {
+            margin-left: -30px;
+        }
+
+        .nav {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        .nav h2 {
+            padding: 1em;
+            cursor: pointer;
+        }
+        .nav h2:hover {
+            background-color: rgba(37, 37, 37, 0.5);
+            color: #ffffff;
+        }
+
+        .side {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 50%;
+            padding: 6em 4em 4em 4em;
+        }
+
+        .side-section {
+            display: none;
+        }
+        .side-section.active {
+            display: block;
+        }
+        .side-section h2 {
+            font-size: 2em;
+            margin-bottom: 1em;
+        }
+        .side-section#about p {
+            padding: 1em 0;
+            font-size: 22px;
+        }
+        .side-section#about p a {
+            color: #252525;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .side-section .socials-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .side-section .socials-container a {
+            text-decoration: none;
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+        }
+        .side-section .socials-container a img {
+            border-radius: 50%;
+            width: 65px;
+            height: 65px;
+        }
+        .side-section .socials-container a:hover {
+            transform: scale(1.2);
+        }
+        .side-section .project {
+            background-color: #252525;
+            color: #ffffff;
+            box-shadow: 0 10px 30px -15px #252525;
+            padding: 1em;
+        }
+        .side-section .project p {
+            padding: 1em 0;
+            font-size: 20px;
+        }
+        .side-section .project a {
+            /*background-color: #252525;
+            color: #ffffff;*/
+            background-color: #ffffff;
+            color: #252525;
+            box-shadow: 0 10px 30px -15px #252525;
+            padding: 0.5em;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3em;
+            float: right;
+        }
+
+        #mobile-back {
+            position: absolute;
+            z-index: 2;
+            background-color: #252525;
+            color: #ffffff;
+            font-size: 1em;
+            padding: 1em 2em;
+            width: fit-content;
+            display: none;
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                margin: 3em;
+                width: calc(100% - 6em);
+                height: calc(100% - 6em);
+            }
+            h1 span {
+                width: 100%;
+                font-size: 2em;
+            }
+            .side {
+                width: 100%;
+                padding: 5em 3em 3em 3em;
+            }
+            body:has(.side .side-section.active) .content {
+                display: none;
+            }
+            body:has(.side .side-section.active) #mobile-back {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h3>Portfolio.</h3>
+        <h1>
+            <span>Zane</span>
+            <span>Wesley</span>
+        </h1>
+
+        <div class="nav">
+            <h2 id="-projects">3. Projects</h2>
+            <h2 id="-socials">2. Socials</h2>
+            <h2 id="-about">1. About</h2>
+        </div>
+    </div>
+
+    <div class="side">
+        <div class="side-section" id="about">
+            <h2>About.</h2>
+            <p>Hey There! I'm Zane, a web developer. I love Jesus, people, web dev, and Apple. I specialize in front-end UX and UI design. My mission is to have a positive impact in the life of everyone I encounter through everyday interactions.</p>
+            <p>In 2019, I created my first website. Inspired by all the creative portfolios out there, I wanted to create my own. From there, my journey began. To this day, I continue run a <a href="https://zanewesley.github.io" target="_blank">personal website</a> for fun, which has following my learning journey.</p>
+            <p>Currently I attend <a href="https://uu.edu" target="_blank">Union University</a> (class of 2027) to attain a degree in Computer Science with a concentration in web development and a minor in business marketing.</p>
+            <p>My main focus these days is simply to pass my classes. But recently, I have also been given various opportunities to freelance web development. Additionally, in my spare time, I work at Chickfila and volunteer at my local church, <a href="https://loveandtruthchurch.com" target="_blank">Love and Truth Church</a>.</p>
+        </div>
+
+        <div class="side-section" id="socials">
+            <h2>Socials.</h2>
+            <div class="socials-container">
+                <a href="https://zanewesley.github.io" target="_blank" style="box-shadow: 0 8px 14px -4px rgba(100,209,255, 0.65);"><img src="https://zanewesley.github.io/images/icon.png" alt="Zane's Website"></a>
+                <a href="https://github.com/zanewesley" target="_blank" style="box-shadow: 0 8px 14px -4px rgba(80, 80, 80, 0.65);"><img src="https://cdn.solo.to/images/link/github.svg" alt="Zane's Github"></a>
+                <a href="https://instagram.com/zanewesley27" target="_blank" style="box-shadow: 0 8px 14px -4px rgba(202, 109, 120, 0.65);"><img src="https://cdn.solo.to/images/link/instagram.svg" alt="Zane's instagram"></a>
+                <a href="https://solo.to/zanewesley" target="_blank" style="box-shadow: 0 8px 14px -4px rgba(54, 115, 253, 0.65);"><img src="https://cdn.solo.to/images/logo/solo-icon.svg" alt="All Zane's Socials"></a>
+            </div>
+        </div>
+
+        <div class="side-section" id="projects">
+            <h2>Projects.</h2>
+            <div class="project">
+                <p>Love and Truth Church needed a survey built to help guide its members towards their biblical spiritual gifts during the Next Steps process. This survey includes a DISC personality profile with a coresponding description. Results also include examples of people woth this same personality and a list of possible ways to better oneself.</p>
+                <p>The survey also provides a list of the top 5 possible spiritual gifts based on the answers to the questions, providing a description and supporting scripture.</p>
+                <p>The results page ands with a functional save button that converts the page to a downloadable PDF.</p>
+                <a href="https://lt-gifts.com/" target="_blank"><h4>DISC Test + Spiritual Gifts</h4></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="mobile-back">Back</div>
+
+
+    <script>
+        document.querySelectorAll('.nav h2').forEach(function(elem) {
+            elem.addEventListener('click', function(e) {
+                document.querySelectorAll('.side-section').forEach(function(elem) {elem.classList.remove('active')});
+                document.getElementById(this.id.replace('-', '')).classList.add('active');
+            });
+        });
+
+        document.getElementById('mobile-back').addEventListener('click', function(e) {
+            document.querySelectorAll('.side-section').forEach(function(elem) {elem.classList.remove('active')});
+        });
+    </script>
+</body>
+</html>
